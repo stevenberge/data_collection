@@ -37,14 +37,14 @@ func init() {
 	}
 }
 
-/* 1. please implement sort code
+/* 1. please implement collect code
  *    u can add some auxiliary structures, variables and functions
  *    dont modify any definition
- * 2. implement flow control for the sort code
+ * 2. implement flow control for the collect code
  */
 func main() {
 	wg.Add(clientNums*2 + 1)
-	// genrateDatas and sort are parallel
+	// genrateDatas and collect are parallel
 	for i := 0; i < clientNums; i++ {
 		go func(index int) {
 			defer wg.Done()
